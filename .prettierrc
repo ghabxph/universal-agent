@@ -1,0 +1,13 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ["*.ts", "*.json"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}

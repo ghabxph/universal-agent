@@ -1,0 +1,40 @@
+{
+  "name": "@ghabxph/universal-agent",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/ghabxph/universal-agent.git",
+  "author": "ガビーくん <11975597+ghabxph@users.noreply.github.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write 'src/**/*.{ts,json}'",
+    "format:watch": "chokidar 'src/**/*.{ts,json}' -c 'yarn format'",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "dev": "nodemon --watch src --ext ts --exec 'yarn lint && yarn build && yarn start'",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.0",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "dotenv": "^16.4.7",
+    "execa": "^9.5.2",
+    "glob": "^11.0.1",
+    "json5": "^2.2.3",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@types/typescript": "^2.0.0",
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3"
+  }
+}
